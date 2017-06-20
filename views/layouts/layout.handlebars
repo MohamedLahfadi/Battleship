@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BattleShip</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/users/home">BattleShip</a>
+         </div>
+     <ul class="nav nav-pills pull-right">
+            {{#if user}}
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/users/login">Login</a></li>
+            <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+         
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+         
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+        <h3 class="text-muted">Battleship</h3>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+
+        
+      </div>
+
+      <footer class="footer">
+        <p>&copy; BattleShip™ - Mohamed Lahfadi, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+</body>
+</html>
