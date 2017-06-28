@@ -13,11 +13,13 @@
 
         <div class="col-md-2 userlist">
             <div class="panel-heading">
-                <span class="glyphicon glyphicon-user"></span> Online ({{ connectedUsers.length }})
+                <span class="glyphicon glyphicon-user"></span> Online ({{ connecterUsers.length }})
             </div>
             <ul class="chat">
                 <li v-for="user in connectedUsers">
-                    {{ user }}&nbsp;<span v-if="userIsTyping(user)" class="glyphicon glyphicon-pencil">..</span>
+                    {{ user.email }}
+                    </br>{{user.username}}
+                    &nbsp;<span v-if="userIsTyping(user)" class="glyphicon glyphicon-pencil">..</span>
                 </li>
 
 
@@ -38,12 +40,12 @@
                                 </div>
                                 <div v-if="message.type == 'chat'">
                                     <span class="chat-img pull-left">
-                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                           
                         </span>
                                     <div class="chat-body clearfix">
                                         <div class="header">
                                             <strong class="primary-font">{{ message.user }}</strong> <small class="pull-right text-muted">
-                                        <span class="glyphicon glyphicon-time"></span>&nbsp;{{ message.timestamp }}</small>
+                                        <span class="nothing"></span>&nbsp;{{ message.timestamp }}</small>
                                         </div>
                                         <p>
                                             {{ message.text }}

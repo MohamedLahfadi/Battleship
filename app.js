@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 connections = [];
-var io = require('socket.io').listen(app);
+var io = require('socket.io').listen(http);
 var http = require('http').Server(app);
 
 mongoose.connect('mongodb://localhost/battleship');
